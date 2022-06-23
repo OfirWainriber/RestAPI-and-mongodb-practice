@@ -41,6 +41,6 @@ router.delete('/:gameID', async (req, res) => {
     } catch (error) {
         res.json({message: error});
     }
-});gi
+});
 
 module.exports = router;
