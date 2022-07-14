@@ -3,7 +3,8 @@ const usersRoute = require('./routes/users');
 const gamesRoute = require('./routes/games');
 const mongoose = require('mongoose');
 
-const dbURI = 'mongodb+srv://test:test@cluster0.nnzhm6b.mongodb.net/?retryWrites=true&w=majority';
+const dbURI = process.env.DB_URL;
+// const dbURI = 'mongodb+srv://test:test@cluster0.nnzhm6b.mongodb.net/?retryWrites=true&w=majority';
 const app = express();
 const PORT = 5000;
 
