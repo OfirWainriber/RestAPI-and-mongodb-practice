@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  nodeapi:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      DB_URL: mongodb://db/arcade
+  db:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - arcade:/data/db
+volumes:
+  arcade:
